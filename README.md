@@ -20,3 +20,25 @@ On a personal computer a 23 input intervals propagation takes about 129.02s with
     # 23 -> 129.02s (2**23 = 8388608)
     # 24 -> 265.40s (2**24 = 16777216)
 ```
+
+# Example 
+
+```python
+import numpy as np
+from endpoints_propagation import a, endpoints_propagation_2n
+
+X = a(19*[[1,2]])
+
+print(X.shape)
+
+def linearfun(*x): return -sum(x)
+
+if __name__ == '__main__':
+
+    print(endpoints_propagation_2n(X,linearfun))
+
+    # (19, 2)
+    # (-38.0, -19.0, (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))
+
+
+```

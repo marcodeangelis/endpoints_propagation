@@ -1,5 +1,4 @@
 import numpy as np
-
 from endpoints_propagation import a, endpoints_propagation_2n
 
 X = a( [[3.5,6.4],
@@ -12,7 +11,7 @@ X = a( [[3.5,6.4],
         [4.5,4.9],
         [7.1,7.9]])
 
-X = a(24*[[1,2]])
+X = a(19*[[1,2]])
 print(X.shape)
 
 def linearfun(*x): return -sum(x)
